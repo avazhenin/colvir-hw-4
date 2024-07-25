@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface PaymentRepository extends CrudRepository<PaymentDTO, Long> {
-    @Query(value = "select p.employee.name as name, sum(p.amount) as amount from PaymentDTO p group by p.employee.name")
+    @Query(value = "select p.employee.name as name, sum(p.amount) as amount from payment p group by p.employee.name")
     List<GroupByAmount> sumAmountByEmployee();
 }

@@ -6,7 +6,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
 @Data
-@Entity
+@Entity(name = "employee")
 @Table(uniqueConstraints = {
     @UniqueConstraint(name = "fio", columnNames = {"name, surname"})
 })

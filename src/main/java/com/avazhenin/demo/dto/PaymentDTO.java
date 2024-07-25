@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@Entity
+@Entity(name = "payment")
 public class PaymentDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -15,5 +15,6 @@ public class PaymentDTO {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private EmployeeDTO employee;
+    @Column(name = "payment_date")
     private Date paymentDate;
 }

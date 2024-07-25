@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Entity
+@Entity(name = "department")
 public class DepartmentDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
